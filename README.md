@@ -1,10 +1,10 @@
 ---
 
-## **🛠️ Features in the Build**  
-✅ **Auto-Completion**: Predicts the next word/token while typing.  
-✅ **Auto-Correction**: Fixes syntax errors (e.g., missing semicolons, misspelled keywords).  
-✅ **FastAPI Backend**: Provides AI-driven corrections and predictions.  
-✅ **Frontend Editor**: Implements real-time suggestions in Darion Playground.  
+## 🛠️ Features in the Build
+✅ Auto-Completion: Predicts the next word/token while typing.  
+✅ Auto-Correction: Fixes syntax errors (e.g., missing semicolons, misspelled keywords).  
+✅ FastAPI Backend: Provides AI-driven corrections and predictions.  
+✅ Frontend Editor: Implements real-time suggestions in Darion Playground.  
 
 ---
 
