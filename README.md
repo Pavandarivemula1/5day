@@ -89,7 +89,7 @@ module.exports = {
 
 ---
 
-### * Ensure Tailwind is Included in Your CSS*
+### *Ensure Tailwind is Included in Your CSS*
 In `index.css` or `App.css`, add:  
 ```
 @tailwind base;
@@ -99,7 +99,7 @@ In `index.css` or `App.css`, add:
 
 ---
 
-### * Restart Your Dev Server*
+### *Restart Your Dev Server*
 Changes in `tailwind.config.js` require a restart:  
 ```
 npm run dev  # or npm start
