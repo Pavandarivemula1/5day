@@ -63,8 +63,89 @@ if __name__ == "__main__":
 ```
 
 ---
-
 ## **2️⃣ Frontend - Darion Playground Editor with AI Suggestions**
+### 1. **Set Up a React Environment**:
+
+If you don't already have a React app set up, you can create one using `create-react-app` (or any React setup you prefer). Here's how you can get started:
+
+#### Using Create React App:
+1. **Install Node.js** (if not installed yet):  
+   You can download and install Node.js from [here](https://nodejs.org/).
+
+2. **Create a new React app**:
+   Open a terminal and run the following command to create a new React application:
+   ```bash
+   npx create-react-app darion-playground
+   ```
+
+3. **Navigate to your project directory**:
+   ```bash
+   cd darion-playground
+   ```
+
+4. **Install dependencies (if necessary)**:
+   If you're using `fetch` (which is built into modern browsers), you don't need to install anything special. However, if you're working with older environments or want to ensure compatibility, you can install `whatwg-fetch`:
+   ```bash
+   npm install whatwg-fetch
+   ```
+
+5. **Start the development server**:
+   ```bash
+   npm start
+   ```
+   This will launch your React app in the browser (usually at `http://localhost:3000`).
+
+### 2. **Add the Code to Your React App**:
+   You need to place the `Playground` component in your app's file structure.
+
+#### Steps:
+1. **Navigate to the `src` folder**:
+   In your React app, go to the `src` folder. This is where you will put your React components.
+
+2. **Create a new file for the component**:
+   Create a new file called `Playground.js` inside the `src` folder and paste the code you provided (the enhanced version with loading/error handling) into that file.
+
+3. **Import and use the `Playground` component**:
+   In the `src/App.js` file, import the `Playground` component you just created and render it inside your `App` component. For example:
+
+```javascript
+// src/App.js
+import React from 'react';
+import Playground from './Playground';  // Import the Playground component
+
+function App() {
+  return (
+    <div className="App">
+      <Playground />  {/* Use the Playground component */}
+    </div>
+  );
+}
+
+export default App;
+```
+
+### 3. **Ensure the API is Running**:
+For this code to work, you need the backend API to be running locally at `http://localhost:8000`. Make sure that:
+- You have the server running on `http://localhost:8000` with the relevant endpoints (`/autocomplete/` and `/correct/`).
+- The backend should handle POST requests at those endpoints and return the appropriate suggestions and corrected code.
+
+If you're using a framework like Django, Flask, or Express.js for the backend, make sure the server is running and is able to handle the requests.
+
+### 4. **Styling (Optional)**:
+If you want to make sure that TailwindCSS is applied (since you're using Tailwind in your code), ensure it's set up in your project. You can follow the TailwindCSS installation guide [here](https://tailwindcss.com/docs/installation).
+
+Alternatively, if you don't want to use TailwindCSS, you can replace the class names with regular CSS styles or any other CSS framework.
+
+### 5. **Run the App**:
+Once everything is set up, go ahead and run your app with `npm start`:
+
+```bash
+npm start
+```
+
+
+---
+
 The frontend will:
 - Call the **FastAPI backend** for **auto-completion & corrections**.
 - Display **real-time suggestions** while typing.  
