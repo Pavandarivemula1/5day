@@ -196,7 +196,7 @@ The frontend will:
 - Call the **FastAPI backend** for **auto-completion & corrections**.
 - Display **real-time suggestions** while typing.  
 
-### ** Frontend Code (React + Tailwind + Fetch API)**
+### **Frontend Code (React + Tailwind + Fetch API)**
 This React-based code will:
 - Capture **code input**.
 - Request **auto-completion & corrections** from the FastAPI backend.
