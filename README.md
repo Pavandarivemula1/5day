@@ -1,14 +1,14 @@
+# Day 5 AI Autocorrection and Playground
+---
+## Features in the Build
+- Auto-Completion: Predicts the next word/token while typing.  
+- Auto-Correction: Fixes syntax errors (e.g., missing semicolons, misspelled keywords).  
+- FastAPI Backend: Provides AI-driven corrections and predictions.  
+- rontend Editor: Implements real-time suggestions in Darion Playground.  
+
 ---
 
-## 🛠️ Features in the Build
-✅ Auto-Completion: Predicts the next word/token while typing.  
-✅ Auto-Correction: Fixes syntax errors (e.g., missing semicolons, misspelled keywords).  
-✅ FastAPI Backend: Provides AI-driven corrections and predictions.  
-✅ Frontend Editor: Implements real-time suggestions in Darion Playground.  
-
----
-
-## **1️⃣ Backend - FastAPI for AI Code Suggestions**
+## **1. Backend - FastAPI for AI Code Suggestions**
 This API will:
 - Accept **partial Darion code** as input.
 - Use **AI models** (RapidFuzz for fuzzy matching) for **auto-completion & syntax correction**.
@@ -16,7 +16,7 @@ This API will:
 
 Let's create the **FastAPI backend**:  
 
-### **🔹 Backend Code (FastAPI)**
+### ** Backend Code (FastAPI)**
 This script will:
 - Provide **auto-completion** using **predefined syntax rules**.
 - Use **fuzzy matching** to detect and fix syntax errors.  
@@ -62,8 +62,51 @@ if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
 ```
 
+### *Create/Edit `tailwind.config.js`*
+If you don’t have a `tailwind.config.js`, generate it by running:  
+```
+npx tailwindcss init
+```
+Then, replace the contents with:  
+
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}", // Ensure Tailwind scans your React files
+    "./public/index.html",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        darionBlue: "#1E40AF", // Custom color example
+      },
+    },
+  },
+  plugins: [],
+};
+```
+
 ---
-## **2️⃣ Frontend - Darion Playground Editor with AI Suggestions**
+
+### * Ensure Tailwind is Included in Your CSS*
+In `index.css` or `App.css`, add:  
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+---
+
+### * Restart Your Dev Server*
+Changes in `tailwind.config.js` require a restart:  
+```
+npm run dev  # or npm start
+```
+
+---
+## **2. Frontend - Darion Playground Editor with AI Suggestions**
 ### 1. **Set Up a React Environment**:
 
 If you don't already have a React app set up, you can create one using `create-react-app` (or any React setup you prefer). Here's how you can get started:
@@ -124,6 +167,9 @@ function App() {
 export default App;
 ```
 
+
+ 
+ 
 ### 3. **Ensure the API is Running**:
 For this code to work, you need the backend API to be running locally at `http://localhost:8000`. Make sure that:
 - You have the server running on `http://localhost:8000` with the relevant endpoints (`/autocomplete/` and `/correct/`).
@@ -150,7 +196,7 @@ The frontend will:
 - Call the **FastAPI backend** for **auto-completion & corrections**.
 - Display **real-time suggestions** while typing.  
 
-### **🔹 Frontend Code (React + Tailwind + Fetch API)**
+### ** Frontend Code (React + Tailwind + Fetch API)**
 This React-based code will:
 - Capture **code input**.
 - Request **auto-completion & corrections** from the FastAPI backend.
@@ -225,8 +271,8 @@ export default function Playground() {
 
 ---
 
-## **3️⃣ Deployment & Integration**
-### **🔹 Steps to Run**
+## **3️. Deployment & Integration**
+### ** Steps to Run**
 1. **Run Backend** (FastAPI)  
    ```bash
    pip install fastapi uvicorn rapidfuzz pydantic
@@ -241,9 +287,9 @@ export default function Playground() {
 
 ---
 
-## **🚀 Final Features in Darion Playground**
-✅ **Real-time Auto-Completion** while typing.  
-✅ **AI-powered Syntax Correction** for errors.  
-✅ **FastAPI Backend** for AI suggestions.  
-✅ **React-based Playground UI** for smooth experience.  
+## ** Final Features in Darion Playground**
+**Real-time Auto-Completion** while typing.  
+**AI-powered Syntax Correction** for errors.  
+**FastAPI Backend** for AI suggestions.  
+**React-based Playground UI** for smooth experience.  
 
