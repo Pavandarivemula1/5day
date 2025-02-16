@@ -16,7 +16,7 @@ This API will:
 
 Let's create the **FastAPI backend**:  
 
-### ** Backend Code (FastAPI)**
+### *Backend Code (FastAPI)*
 This script will:
 - Provide **auto-completion** using **predefined syntax rules**.
 - Use **fuzzy matching** to detect and fix syntax errors.  
