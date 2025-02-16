@@ -64,12 +64,12 @@ if __name__ == "__main__":
 
 ### *Create/Edit `tailwind.config.js`*
 If you don’t have a `tailwind.config.js`, generate it by running:  
-```
+```js
 npx tailwindcss init
 ```
 Then, replace the contents with:  
 
-```
+```js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -91,7 +91,7 @@ module.exports = {
 
 ### *Ensure Tailwind is Included in Your CSS*
 In `index.css` or `App.css`, add:  
-```
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
