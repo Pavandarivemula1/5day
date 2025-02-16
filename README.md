@@ -272,7 +272,7 @@ export default function Playground() {
 ---
 
 ## **3️. Deployment & Integration**
-### ** Steps to Run**
+### **Steps to Run**
 1. **Run Backend** (FastAPI)  
    ```bash
    pip install fastapi uvicorn rapidfuzz pydantic
@@ -287,9 +287,9 @@ export default function Playground() {
 
 ---
 
-## ** Final Features in Darion Playground**
+## **Final Features in Darion Playground**
 **Real-time Auto-Completion** while typing.  
 **AI-powered Syntax Correction** for errors.  
-**FastAPI Backend** for AI suggestions.  
+**FastAPI Backend** for AI suggestions.
 **React-based Playground UI** for smooth experience.  
 
